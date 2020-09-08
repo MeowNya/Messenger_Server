@@ -6,9 +6,16 @@ __author__ = 'MeowNya'
 
 from flask import Flask
 from datetime import datetime
+import logging
+
 
 app = Flask(__name__)
 NAME = 'Messenger Server'
+
+app.debug = True
+file_handler = logging.FileHandler('log.txt', encoding='utf-8')
+file_handler.setLevel(logging.DEBUG)
+app.logger.addHandler(file_handler)
 
 
 @app.route('/')
