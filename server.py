@@ -12,16 +12,15 @@ import logging
 app = Flask(__name__)
 NAME = 'Messenger Server'
 
-app.debug = True
-file_handler = logging.FileHandler('log.txt', encoding='utf-8')
-file_handler.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('server.log', encoding='utf-8')
+file_handler.setLevel(logging.WARNING)
 app.logger.addHandler(file_handler)
 
 
 @app.route('/')
 def index():
     return """<center><font size="20" face="Times New Roman"><b>You're Welcome!</b>
-     <br> <a href='/status'>Статус</a></font></center>"""
+     <br> <a href='/status'>Status</a></font></center>"""
 
 
 @app.route("/status")
