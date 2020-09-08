@@ -1,2 +1,2 @@
 # Messenger_Server
-First lesson was started
+First lesson was started from SKILLBOX
