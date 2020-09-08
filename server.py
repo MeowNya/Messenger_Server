@@ -26,7 +26,7 @@ def index():
 @app.route("/status")
 def status():
     return {
-        'status': 'OK',
+        'status': True,
         'name': NAME,
         'time': datetime.now().strftime('%d.%m.%Y %H:%M:%S')
     }
